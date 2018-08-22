@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Restful Routes</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Route Name</th>
+          <th>Flask Pattern</th>
+          <th>Flask Method</th>
+          <th>Purpose</th>
+          <th>Generally Accepted Pattern</th>
+          <th>Generally Accepted Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Index</td>
+          <td>"/"</td>
+          <td>GET</td>
+          <td>Get all records from resource</td>
+          <td>"/"</td>
+          <td>GET</td>
+        </tr>
+        <tr>
+          <td>Create</td>
+          <td>"/create"</td>
+          <td>POST</td>
+          <td>Create a new record in resource</td>
+          <td>"/"</td>
+          <td>POST</td>
+        </tr>
+        <tr>
+          <td>Update</td>
+          <td>"/:id/update"</td>
+          <td>POST</td>
+          <td>Update record matching :id</td>
+          <td>"/:id"</td>
+          <td>PUT/PATCH</td>
+        </tr>
+        <tr>
+          <td>Destroy</td>
+          <td>"/:id/delete"</td>
+          <td>POST</td>
+          <td>Delete record matching :id</td>
+          <td>"/:id"</td>
+          <td>DELETE</td>
+        </tr>
+        <tr>
+          <td>New</td>
+          <td>"/new"</td>
+          <td>GET</td>
+          <td>Render create form for specific resource</td>
+          <td>"/new"</td>
+          <td>GET</td>
+        </tr>
+        <tr>
+          <td>Edit</td>
+          <td>"/:id/edit"</td>
+          <td>GET</td>
+          <td>Render edit form for specific record</td>
+          <td>"/:id/edit"</td>
+          <td>GET</td>
+        </tr>
+        <tr>
+          <td>Show</td>
+          <td>"/:id"</td>
+          <td>GET</td>
+          <td>Display single record</td>
+          <td>"/:id"</td>
+          <td>GET</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
