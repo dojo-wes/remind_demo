@@ -13,6 +13,7 @@
 <body>
   <div class="container">
     <h1>Index Page</h1>
+    <a href="/logout" class="button">Logout</a>
     <table>
       <thead>
         <tr>
@@ -25,14 +26,18 @@
       <tbody>
         {% for user in users %}
           <tr>
-            <td><a href="/{{ user['id'] }}">{{ user['first_name'] }}</a></td>
+            <td>
+              <a href="/{{ user['id'] }}">{{ user['first_name'] }}</a>
+            </td>
             <td>{{ user['last_name'] }}</td>
             <td>{{ user['email'] }}</td>
             <td>
-              <a href="/{{ user['id'] }}/edit" class="button">Edit User</a>
-              <form action="/{{ user['id'] }}/delete" method='post'>
-                <input type="submit" value="Delete User">
-              </form>
+              {% if session['user_id'] == user['id'] %}
+                <a href="/{{ user['id'] }}/edit" class="button">Edit User</a>
+                <form action="/{{ user['id'] }}/delete" method='post'>
+                  <input type="submit" value="Delete User">
+                </form>
+              {% endif %}
             </td>
           </tr>
         {% endfor %}

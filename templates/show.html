@@ -33,6 +33,12 @@
         </tr>
       </tbody>
     </table>
+    <h2>Reminders</h2>
+    <ul>
+      {% for reminder in reminder_list %}
+        <li>{{ reminder['content'] }}</li>
+      {% endfor %}
+    </ul>
   </div>
 </body>
 </html>
